@@ -62,7 +62,7 @@ const handleRemoveOne = async (id: number) => {
   const hide = message.loading('正在删除');
   try {
     await removeUser({
-      ids:[id],
+      id,
     });
     hide();
     message.success('删除成功，即将刷新');
